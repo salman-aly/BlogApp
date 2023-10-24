@@ -4,7 +4,8 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #fff;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 
@@ -19,6 +20,9 @@ body {
     background: rgb(122, 114, 253);
     background: linear-gradient(4deg, rgba(122, 114, 253, 1) 38%, rgba(158, 65, 245, 1) 55%, rgba(169, 49, 242, 1) 76%);
     position: relative;
+    box-shadow: -3px 1px 26px 10px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: -3px 1px 26px 10px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: -3px 1px 26px 10px rgba(255, 255, 255, 0.75);
 }
 
 .main>h5 {
@@ -46,9 +50,9 @@ body {
     display: none;
 }
 
-.browser-img label{
+.browser-img label {
     width: 120px;
-    border-radius:5px ;
+    border-radius: 5px;
     background: #fff;
     color: black;
     margin-left: 10px;

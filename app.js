@@ -1,7 +1,7 @@
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
-
+// for login restriction
 function login() {
     var userName = document.getElementById("username").value
     var passWord = document.getElementById("pass").value

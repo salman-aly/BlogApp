@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 110px 0px 0px 0px;
     background: rgb(122, 114, 253);
     background: linear-gradient(4deg, rgba(122, 114, 253, 1) 38%, rgba(158, 65, 245, 1) 55%, rgba(169, 49, 242, 1) 76%);
     position: relative;

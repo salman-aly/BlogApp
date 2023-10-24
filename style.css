@@ -16,8 +16,8 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    background: rgb(122,114,253);
-    background: linear-gradient(4deg, rgba(122,114,253,1) 38%, rgba(158,65,245,1) 55%, rgba(169,49,242,1) 76%);
+    background: rgb(122, 114, 253);
+    background: linear-gradient(4deg, rgba(122, 114, 253, 1) 38%, rgba(158, 65, 245, 1) 55%, rgba(169, 49, 242, 1) 76%);
     position: relative;
 }
 
@@ -26,19 +26,44 @@ body {
 }
 
 .main>img {
-    height: 50px;
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
     margin-top: -50px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+.browser-img {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.browser-img input {
+    display: none;
+}
+
+.browser-img label{
+    width: 120px;
+    border-radius:5px ;
+    background: #fff;
+    color: black;
+    margin-left: 10px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 
-.login-txt{
+.login-txt {
     color: #fff;
 }
 
 input {
-    height: 40px !important;
-    width: 80%;
+    height: 30px !important;
+    width: 320px;
     margin: 5px;
     border: none;
     box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
@@ -56,7 +81,7 @@ input {
     position: relative;
 }
 
-input::placeholder{
+input::placeholder {
     color: #fff;
 }
 
@@ -65,11 +90,35 @@ input ::-moz-focus-inner {
 }
 
 
-.bxs-user{
+.bxs-user {
     position: absolute;
-    top: 42%;
+    top: 45%;
     right: 12%;
     font-size: 20px;
+}
+
+.bxs-lock-alt {
+    position: absolute !important;
+    top: 55%;
+    right: 12% !important;
+    font-size: 20px;
+}
+
+.remeberndforget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.remeberndforget input {
+    width: 16px;
+}
+
+.remeberndforget>input a {
+    color: #fff;
+    margin-left: 30px !important;
+    text-decoration: none;
 }
 
 .main button {
@@ -95,14 +144,21 @@ button:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-.swal2-confirm{
+.swal2-confirm {
     width: 200px !important;
     background-color: #1A87EC;
     box-shadow: none !important;
 }
-.forget a{
+
+.forget a {
     color: #fff;
     text-decoration: none;
+    padding-left: 90px;
+}
+
+a:-webkit-any-link {
+    color: white;
+    text-decoration: none !important;
 }
 
 
@@ -121,7 +177,7 @@ button:hover {
     background-color: red;
 }
 
-.forget .hint-btn{
+.forget .hint-btn {
     font-size: 14px;
     font-weight: 400;
     width: 250px !important;

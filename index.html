@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css" />
     <link
       rel="shortcut icon"
       href="images/WhatsApp_Image_2023-09-26_at_6.56.10_PM-removebg-preview.png"
@@ -25,13 +24,32 @@
       name="myForm"
       required
       id="form">
-      <h5 class="login-txt">LOG IN</h5>
-      <img src="images/user1.png" alt="" />
-      <i class='bx bxs-user bx-flashing' style='color:#ffffff'></i>
-      <input type="text" placeholder="Username" name="name" id="username" />
-      <input type="password" placeholder="Password" name="password" id="pass" />
+      <h5 class="login-txt"></h5>
+      <img class="Profile-img" id="userImage" src="images/userpicture.webp" alt="" />
+      <div class="browser-img">
+        <label for="userProfile">Select Profile</label>
+        <input type="file" id="userProfile" name="img" accept="image/*" />
+      </div>
+      <div>
+        <i class="bx bxs-user bx-flashing" style="color: #ffffff"></i>
+        <input type="text" placeholder="Username" name="name" id="username" />
+      </div>
+      <div>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="pass" />
+        <i class="bx bxs-lock-alt bx-flashing" style="color: #ffffff"></i>
+      </div>
+
+      <div class="remeberndforget">
+        <input type="checkbox" name="" id="" /><a href="">Remember me</a>
+        <p class="forget"><a href="#">Forget password?</a></p>
+      </div>
+
       <button onclick="login()" type="submit">Login</button>
-      <p class="forget"><a href="#">Forget password</a></p>
+
       <p class="forget" id="forget" onclick="forget()">
         <button class="hint-btn">Hint:Username & password</button>
       </p>

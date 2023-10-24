@@ -10,14 +10,15 @@ body {
 
 
 .main {
-    height: 480px;
-    width: 380px;
+    height: 550px;
+    width: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    background: rgb(122, 114, 253);
-    background: linear-gradient(4deg, rgba(122, 114, 253, 1) 38%, rgba(158, 65, 245, 1) 55%, rgba(169, 49, 242, 1) 76%);
+    background: rgb(122,114,253);
+    background: linear-gradient(4deg, rgba(122,114,253,1) 38%, rgba(158,65,245,1) 55%, rgba(169,49,242,1) 76%);
+    position: relative;
 }
 
 .main>h5 {
@@ -30,13 +31,14 @@ body {
     margin-bottom: 60px;
 }
 
-.login-txt {
+
+.login-txt{
     color: #fff;
 }
 
 input {
     height: 40px !important;
-    width: 320px;
+    width: 80%;
     margin: 5px;
     border: none;
     box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
@@ -54,7 +56,7 @@ input {
     position: relative;
 }
 
-input::placeholder {
+input::placeholder{
     color: #fff;
 }
 
@@ -62,35 +64,12 @@ input ::-moz-focus-inner {
     color: transparent;
 }
 
-.bx {
+
+.bxs-user{
     position: absolute;
-    right: 39%;
-    margin-top: 25px;
+    top: 42%;
+    right: 12%;
     font-size: 20px;
-}
-
-.forget .bxs-lock-open-alt{
-    position: absolute;
-    right: 37%;
-    margin-top: 0px;
-    font-size: 17px;
-}
-
-.chkndforget {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* column-gap: 30px; */
-}
-
-.chkndforget input {
-    width: 15px !important;
-}
-
-.chkndforget a{
-    text-decoration: none;
-    color: #fff;
-    margin-right: 18px;
 }
 
 .main button {
@@ -99,7 +78,7 @@ input ::-moz-focus-inner {
     background-color: #ffffff;
     border: none;
     margin-top: 30px;
-    margin-bottom: -50px;
+    margin-bottom: 10px;
     color: #000000;
     text-align: center;
     text-decoration: none;
@@ -116,16 +95,14 @@ button:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-.swal2-confirm {
+.swal2-confirm{
     width: 200px !important;
     background-color: #1A87EC;
     box-shadow: none !important;
 }
-
-.forget a {
+.forget a{
     color: #fff;
     text-decoration: none;
-    margin-left: 60px;
 }
 
 
@@ -144,7 +121,7 @@ button:hover {
     background-color: red;
 }
 
-.forget .hint-btn {
+.forget .hint-btn{
     font-size: 14px;
     font-weight: 400;
     width: 250px !important;

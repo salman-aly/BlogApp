@@ -1,0 +1,153 @@
+body {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+}
+
+
+
+.main {
+    height: 480px;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgb(122, 114, 253);
+    background: linear-gradient(4deg, rgba(122, 114, 253, 1) 38%, rgba(158, 65, 245, 1) 55%, rgba(169, 49, 242, 1) 76%);
+}
+
+.main>h5 {
+    font-size: 35px;
+}
+
+.main>img {
+    height: 50px;
+    margin-top: -50px;
+    margin-bottom: 60px;
+}
+
+.login-txt {
+    color: #fff;
+}
+
+input {
+    height: 40px !important;
+    width: 320px;
+    margin: 5px;
+    border: none;
+    box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
+    /* outline: none; */
+    cursor: pointer;
+    border: 1px solid #1A87EC;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    background: transparent;
+    color: #fff;
+    position: relative;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+input ::-moz-focus-inner {
+    color: transparent;
+}
+
+.bx {
+    position: absolute;
+    right: 39%;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.forget .bxs-lock-open-alt{
+    position: absolute;
+    right: 37%;
+    margin-top: 0px;
+    font-size: 17px;
+}
+
+.chkndforget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* column-gap: 30px; */
+}
+
+.chkndforget input {
+    width: 15px !important;
+}
+
+.chkndforget a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 18px;
+}
+
+.main button {
+    width: 200px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: -50px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #1A87EC;
+    transition: 0.3s ease-out;
+    transform: translateY(2px);
+    color: rgb(255, 255, 255) !important;
+}
+
+.swal2-confirm {
+    width: 200px !important;
+    background-color: #1A87EC;
+    box-shadow: none !important;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 60px;
+}
+
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.social img {
+    height: 25px;
+}
+
+.quiz-page {
+    background-color: red;
+}
+
+.forget .hint-btn {
+    font-size: 14px;
+    font-weight: 400;
+    width: 250px !important;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}

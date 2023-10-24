@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css" />
+    <link
+      rel="shortcut icon"
+      href="images/WhatsApp_Image_2023-09-26_at_6.56.10_PM-removebg-preview.png"
+      type="image/x-icon" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="main"
+      onsubmit="return requiredForm()"
+      name="myForm"
+      required
+      id="form">
+      <h5 class="login-txt">LOG IN</h5>
+      <img src="images/user1.png" alt="" />
+      <i class="fa-solid fa-user"></i>
+      <div class="user">
+        <input type="text" placeholder="Username" name="name" id="username" />
+        <i class='bx bxs-user bx-burst' style='color:#ffffff'></i>
+      </div>
+      <div class="password">
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="pass" />
+          <i class='bx bxs-lock-open-alt bx-burst' style='color:#fff'></i>
+      </div>
+      <div class="chkndforget">
+        <input type="checkbox" name="" id="" /><a href="#">Remember Me</a>
+        <div>
+          <p class="forget">
+            <i class="bx bxs-lock-open-alt bx-tada" style="color: #ffffff"></i>
+            <a href="#">Forget password</a>
+          </p>
+        </div>
+      </div>
+      <button onclick="login()" type="submit">Login</button>
+
+      <p class="forget" id="forget" onclick="forget()">
+        <button class="hint-btn">Hint:Username & password</button>
+      </p>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

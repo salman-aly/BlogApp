@@ -18,6 +18,7 @@
   </head>
 
   <body>
+    <!-- for login form -->
     <div
       class="main"
       onsubmit="return requiredForm()"
@@ -54,6 +55,18 @@
 
       <div class="twoBtn">
         <button onclick="login()" type="submit">Login</button>
+        <button onclick="signUP()" type="submit">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- for Sign Up form -->
+    <div class="main-signup">
+      <h2>Sign Up</h2>
+      <div class="container">
+        <i class="bx bxs-user bx-flashing" style="color: #ffffff"></i>
+        <input type="text" placeholder="Enter your username" />
+        <i class="bx bxs-lock-alt bx-flashing" style="color: #ffffff"></i>
+        <input type="password" placeholder="Enter your password" />
         <button onclick="signUP()" type="submit">Sign Up</button>
       </div>
     </div>

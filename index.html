@@ -25,7 +25,11 @@
       required
       id="form">
       <h5 class="login-txt"></h5>
-      <img class="Profile-img" id="userImage" src="images/userpicture.webp" alt="" />
+      <img
+        class="Profile-img"
+        id="userImage"
+        src="images/userpicture.webp"
+        alt="" />
       <div class="browser-img">
         <label for="userProfile">Select Profile</label>
         <input type="file" id="userProfile" name="img" accept="image/*" />
@@ -48,11 +52,10 @@
         <p class="forget"><a href="#">Forget password?</a></p>
       </div>
 
-      <button onclick="login()" type="submit">Login</button>
-
-      <p class="forget" id="forget" onclick="forget()">
-        <button class="hint-btn">Hint:Username & password</button>
-      </p>
+      <div class="twoBtn">
+        <button onclick="login()" type="submit">Login</button>
+        <button onclick="signUP()" type="submit">Sign Up</button>
+      </div>
     </div>
 
     <script src="app.js"></script>

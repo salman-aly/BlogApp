@@ -23,9 +23,16 @@ function login() {
             text: 'Please enter correct username and password!',
         });
     }
+    var userName = document.getElementById("username").value = "";
+    var passWord = document.getElementById("pass").value = "";
 }
 
 // for change profile image
 changeProfile.onchange = function () {
     userImage.src = URL.createObjectURL(changeProfile.files[0])
+}
+
+// function for sign up form
+function signUP() {
+
 }

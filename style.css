@@ -11,8 +11,8 @@ body {
 
 
 .main {
-    height: 550px;
-    width: 400px;
+    height: 500px;
+    width: 380px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -96,14 +96,14 @@ input ::-moz-focus-inner {
 
 .bxs-user {
     position: absolute;
-    top: 45%;
+    top: 48%;
     right: 12%;
     font-size: 20px;
 }
 
 .bxs-lock-alt {
     position: absolute !important;
-    top: 55%;
+    top: 59%;
     right: 12% !important;
     font-size: 20px;
 }
@@ -126,23 +126,24 @@ input ::-moz-focus-inner {
 }
 
 .main button {
-    width: 200px;
+    width: 140px;
     border-radius: 20px;
     background-color: #ffffff;
     border: none;
     margin-top: 30px;
-    margin-bottom: 10px;
     color: #000000;
     text-align: center;
     text-decoration: none;
-    line-height: 2;
+    line-height: 1.8;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    margin-left: 5px;
 }
 
 button:hover {
-    background: #1A87EC;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
     transition: 0.3s ease-out;
     transform: translateY(2px);
     color: rgb(255, 255, 255) !important;
@@ -150,7 +151,8 @@ button:hover {
 
 .swal2-confirm {
     width: 200px !important;
-    background-color: #1A87EC;
+    background: rgb(131, 58, 180) !important;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%) !important;
     box-shadow: none !important;
 }
 

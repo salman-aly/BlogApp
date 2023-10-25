@@ -5,16 +5,16 @@ var userName = document.getElementById("username").value
 var passWord = document.getElementById("pass").value
 
 var signUpUsername = document.getElementById("username-signup").value;
-var signUppassword = document.getElementById("pass-signup").value;
+var userPassword = document.getElementById("pass-signup").value;
 
 localStorage.setItem("username", signUpUsername);
-localStorage.setItem("password", signUppassword);
+localStorage.setItem("password",userPassword);
 
 var dataBaseUserName = localStorage.getItem("username", signUpUsername);
-var dataBasepassword = localStorage.getItem("password", signUppassword);
+var dataBasepassword = localStorage.getItem("password",userPassword);
 
 // console.log(signUpUsername, "user");
-// console.log(signUppassword, "pas");
+// console.loguserPassword, "pas");
 
 
 
@@ -24,7 +24,7 @@ function login() {
     var passWord = document.getElementById("pass").value
 
     var signUpUsername = document.getElementById("username-signup").value;
-    var signUppassword = document.getElementById("pass-signup").value;
+    var userPassword = document.getElementById("pass-signup").value;
 
     if (userName === "" || passWord === "") {
         Swal.fire({
@@ -32,8 +32,8 @@ function login() {
             title: 'Oops...',
             text: 'Username and password cant be empty!',
         });
-    } else if (userName === signUpUsername && passWord === signUppassword) {
-        alert("Login Successfully!");
+    } else if (userName == signUpUsername && passWord == userPassword) {
+       alert("Login successfull!")
         window.location.assign("index1.html");
     } else {
         Swal.fire({
@@ -55,9 +55,9 @@ changeProfile.onchange = function () {
 // function for sign up form
 function signUp() {
     var signUpUsername = document.getElementById("username-signup").value
-    var signUppassword = document.getElementById("pass-signup").value
+    var userPassword = document.getElementById("pass-signup").value
 
-    if (signUpUsername === "" || signUppassword === "") {
+    if (signUpUsername === "" ||userPassword === "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -66,13 +66,13 @@ function signUp() {
     }
 
     localStorage.setItem("username", signUpUsername);
-    localStorage.setItem("password", signUppassword);
+    localStorage.setItem("password",userPassword);
 
-    var signUpUsername = document.getElementById("username-signup").value = "";
-    var signUppassword = document.getElementById("pass-signup").value = "";
+    // var signUpUsername = document.getElementById("username-signup").value = "";
+    // var userPassword = document.getElementById("pass-signup").value = "";
 
     // console.log("Username localStorage:", signUpUsername);
-    // console.log("Password localStorage:", signUppassword);
+    // console.log("Password localStorage:",userPassword);
 }
 
 // function for register form

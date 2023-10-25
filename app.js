@@ -25,22 +25,28 @@ localStorage.setItem("password", signUppassword);
 var dataBaseUserName = localStorage.getItem("username", signUpUsername);
 var dataBasepassword = localStorage.getItem("password", signUppassword);
 
-console.log(dataBaseUserName);
-console.log(dataBasepassword);
+console.log(signUpUsername, "user");
+console.log(signUppassword, "pas");
 
 
 
 // for login restriction
 function login() {
+    var userName = document.getElementById("username").value
+    var passWord = document.getElementById("pass").value
+
+    var signUpUsername = document.getElementById("username-signup").value;
+    var signUppassword = document.getElementById("pass-signup").value;
+
     if (userName === "" || passWord === "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Username and password cant be empty!',
         });
-    } else if (userName === dataBaseUserName && passWord === dataBasepassword) {
+    } else if (userName === signUpUsername && passWord === signUppassword) {
         alert("Login Successfully!");
-        window.location.assign("start.html");
+        window.location.assign("index1.html");
     } else {
         Swal.fire({
             icon: 'error',
@@ -71,9 +77,11 @@ function signUp() {
         });
     }
 
+    localStorage.setItem("username", signUpUsername);
+    localStorage.setItem("password", signUppassword);
+
     // console.log("Username localStorage:", signUpUsername);
     // console.log("Password localStorage:", signUppassword);
-
 }
 
 // function for register form

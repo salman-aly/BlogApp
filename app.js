@@ -4,18 +4,6 @@ var changeProfile = document.getElementById("userProfile");
 var userName = document.getElementById("username").value
 var passWord = document.getElementById("pass").value
 
-// var signUpUsername = document.getElementById("username-signup").value
-// var signUppassword = document.getElementById("pass-signup").value
-
-// localStorage.setItem("username", JSON.stringify(signUpUsername));
-// localStorage.setItem("password", JSON.stringify(signUppassword));
-
-// var dataBaseUserName = JSON.parse(localStorage.getItem(signUpUsername));
-// var dataBasepassword = JSON.parse(localStorage.getItem(signUppassword));
-
-// console.log(dataBaseUserName)
-// console.log(dataBasepassword)
-
 var signUpUsername = document.getElementById("username-signup").value;
 var signUppassword = document.getElementById("pass-signup").value;
 
@@ -25,8 +13,8 @@ localStorage.setItem("password", signUppassword);
 var dataBaseUserName = localStorage.getItem("username", signUpUsername);
 var dataBasepassword = localStorage.getItem("password", signUppassword);
 
-console.log(signUpUsername, "user");
-console.log(signUppassword, "pas");
+// console.log(signUpUsername, "user");
+// console.log(signUppassword, "pas");
 
 
 
@@ -79,6 +67,9 @@ function signUp() {
 
     localStorage.setItem("username", signUpUsername);
     localStorage.setItem("password", signUppassword);
+
+    var signUpUsername = document.getElementById("username-signup").value = "";
+    var signUppassword = document.getElementById("pass-signup").value = "";
 
     // console.log("Username localStorage:", signUpUsername);
     // console.log("Password localStorage:", signUppassword);

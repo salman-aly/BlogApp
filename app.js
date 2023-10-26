@@ -15,8 +15,8 @@ localStorage.setItem("username", signUpUsername);
 localStorage.setItem("password", userPassword);
 
 //Get the signup username and password from the localstorage
-var dataBaseUserName = localStorage.getItem("username", signUpUsername);
-var dataBasepassword = localStorage.getItem("password", userPassword);
+var dataBaseUserName = localStorage.getItem("username");
+var dataBasepassword = localStorage.getItem("password");
 
 // console.log(signUpUsername, "user");
 // console.loguserPassword, "pas");
@@ -25,11 +25,17 @@ var dataBasepassword = localStorage.getItem("password", userPassword);
 
 // for login restriction
 function login() {
+    event.preventDefault()
     var userName = document.getElementById("username").value
     var passWord = document.getElementById("pass").value
 
     var signUpUsername = document.getElementById("username-signup").value;
     var userPassword = document.getElementById("pass-signup").value;
+
+    //note======> not working
+    // if(userName !== dataBaseUserName && passWord !== dataBasepassword){
+    //     alert("user not found!")
+    // }
 
     if (userName === "" || passWord === "") {
         Swal.fire({
@@ -39,7 +45,7 @@ function login() {
         });
     } else if (userName == signUpUsername && passWord == userPassword) {
         alert("Login successfull!")
-        window.location.href = "./index1.html"  
+        window.location.href = "index1.html"  
     } else {
         Swal.fire({
             icon: 'error',
@@ -59,6 +65,7 @@ changeProfile.onchange = function () {
 
 // function for sign up form
 function signUp() {
+    event.preventDefault()
     var signUpUsername = document.getElementById("username-signup").value
     var userPassword = document.getElementById("pass-signup").value
 
@@ -74,7 +81,7 @@ function signUp() {
             title: `${signUpUsername} signup successfully!`,
             showConfirmButton: false,
             timer: 1500
-        })
+        });
     }
 
     localStorage.setItem("username", signUpUsername);

@@ -32,25 +32,27 @@ function login() {
     var signUpUsername = document.getElementById("username-signup").value;
     var userPassword = document.getElementById("pass-signup").value;
 
-    //note======> not working
-    // if(userName !== dataBaseUserName && passWord !== dataBasepassword){
-    //     alert("user not found!")
-    // }
-
-    if (userName === "" || passWord === "") {
+    if (userName === "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Username and password cant be empty!',
+            text: `Username can't be empty!`
         });
-    } else if (userName == signUpUsername && passWord == userPassword) {
+    } else if (passWord === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `Password can't be empty!`
+        });
+    }
+    else if (userName == signUpUsername && passWord == userPassword) {
         alert("Login successfull!")
-        window.location.href = "index1.html"  
+        window.location.href = "index1.html"
     } else {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Please enter correct username and password!',
+            text: 'User not found!',
         });
     }
     var userName = document.getElementById("username").value = "";

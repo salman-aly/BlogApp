@@ -1,17 +1,20 @@
+//For profile change
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
-// var forgetBtnPopup = document.getElementById("forgetBtn");
-
+//get the username and password form Login form
 var userName = document.getElementById("username").value
 var passWord = document.getElementById("pass").value
 
+//get the username and password from signup form
 var signUpUsername = document.getElementById("username-signup").value;
 var userPassword = document.getElementById("pass-signup").value;
 
+//Store the signup username and password in the localstorage
 localStorage.setItem("username", signUpUsername);
 localStorage.setItem("password", userPassword);
 
+//Get the signup username and password from the localstorage
 var dataBaseUserName = localStorage.getItem("username", signUpUsername);
 var dataBasepassword = localStorage.getItem("password", userPassword);
 

@@ -1,6 +1,8 @@
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
+// var forgetBtnPopup = document.getElementById("forgetBtn");
+
 var userName = document.getElementById("username").value
 var passWord = document.getElementById("pass").value
 
@@ -8,10 +10,10 @@ var signUpUsername = document.getElementById("username-signup").value;
 var userPassword = document.getElementById("pass-signup").value;
 
 localStorage.setItem("username", signUpUsername);
-localStorage.setItem("password",userPassword);
+localStorage.setItem("password", userPassword);
 
 var dataBaseUserName = localStorage.getItem("username", signUpUsername);
-var dataBasepassword = localStorage.getItem("password",userPassword);
+var dataBasepassword = localStorage.getItem("password", userPassword);
 
 // console.log(signUpUsername, "user");
 // console.loguserPassword, "pas");
@@ -33,8 +35,8 @@ function login() {
             text: 'Username and password cant be empty!',
         });
     } else if (userName == signUpUsername && passWord == userPassword) {
-       alert("Login successfull!")
-        window.location.assign("index1.html");
+        alert("Login successfull!")
+        window.location.href = "./index1.html"  
     } else {
         Swal.fire({
             icon: 'error',
@@ -57,16 +59,23 @@ function signUp() {
     var signUpUsername = document.getElementById("username-signup").value
     var userPassword = document.getElementById("pass-signup").value
 
-    if (signUpUsername === "" ||userPassword === "") {
+    if (signUpUsername === "" || userPassword === "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'You cant signup without username and password!',
         });
+    } else {
+        Swal.fire({
+            icon: 'success',
+            title: `${signUpUsername} signup successfully!`,
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 
     localStorage.setItem("username", signUpUsername);
-    localStorage.setItem("password",userPassword);
+    localStorage.setItem("password", userPassword);
 
     // var signUpUsername = document.getElementById("username-signup").value = "";
     // var userPassword = document.getElementById("pass-signup").value = "";
@@ -85,4 +94,23 @@ function register() {
 function closePopUp() {
     var signup = document.getElementById("signUp").style.display = "none"
     var login = document.getElementById("form").style.display = "flex"
+}
+
+// function for forget password
+function forgetBtnPopup() {
+    Swal.fire({
+        title: 'Do you want to change your password?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't change`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            Swal.fire('Saved!', '', 'success')
+        } else if (result.isDenied) {
+            Swal.fire('Changes are not saved!', '', 'info')
+        }
+    })
+
 }

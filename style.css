@@ -60,6 +60,10 @@ body {
     cursor: pointer;
 }
 
+.browser-img label:hover{
+    background-color: #ddd;
+}
+
 
 .login-txt {
     color: #fff;

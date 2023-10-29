@@ -230,7 +230,7 @@ a:-webkit-any-link {
 .container input {
     width: 95% !important;
     color: rgb(255, 255, 255) !important;
-    border-bottom: 1px solid #1A87EC;
+    border-bottom: 1px solid #dadada;
     background-color: transparent;
 }
 

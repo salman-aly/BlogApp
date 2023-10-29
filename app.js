@@ -2,13 +2,13 @@
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
-//get the username and password form Login form
-var userName = document.getElementById("username").value
-var passWord = document.getElementById("pass").value
+// //get the username and password form Login form
+var userName = document.getElementById("username");
+var passWord = document.getElementById("pass");
 
 //get the username and password from signup form
-var signUpUsername = document.getElementById("username-signup").value;
-var userPassword = document.getElementById("pass-signup").value;
+var signUpUsername = document.getElementById("username-signup")
+var userPassword = document.getElementById("pass-signup")
 
 //Store the signup username and password in the localstorage
 localStorage.setItem("username", signUpUsername);
@@ -18,14 +18,13 @@ localStorage.setItem("password", userPassword);
 var dataBaseUserName = localStorage.getItem("username");
 var dataBasepassword = localStorage.getItem("password");
 
-// console.log(signUpUsername, "user");
-// console.loguserPassword, "pas");
+
 
 
 
 // for login restriction
 function login() {
-    event.preventDefault()
+    // event.preventDefault()
     var userName = document.getElementById("username").value
     var passWord = document.getElementById("pass").value
 
@@ -47,7 +46,7 @@ function login() {
     }
     else if (userName == signUpUsername && passWord == userPassword) {
         alert("Login successfull!")
-        window.location.href = "index1.html"
+        window.location.href = "post.html"
     } else {
         Swal.fire({
             icon: 'error',

@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
 
 .post {
@@ -90,4 +91,46 @@
     background-color: #0093FF;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+}
+
+.newPost {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.newPost .creadtedPost{
+    width: 400px;
+    background-color: #005be3;  
+    height: 400px;
+    border-radius: 50px 0px 0px 0px;
+}
+
+.newPost h3{
+    margin-top: 30px;
+    font-size: 26px;
+    margin-bottom: 120px;
+}
+
+.newPost .creadtedPost h3::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.newPost p{
+    margin-bottom: 30px;
+}
+
+.newPost .bx{
+    font-size: 22px;
+    margin-left: 20px;
 }

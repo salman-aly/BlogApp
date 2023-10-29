@@ -21,7 +21,8 @@ var dataBaseUserName = localStorage.getItem("username");
 
 
 
-
+var userImage = document.getElementById("userImage");
+var changeProfile = document.getElementById("userProfile");
 
 
 userPost.innerHTML = `
@@ -30,7 +31,7 @@ userPost.innerHTML = `
     <div class="hr"></div>
     <div class="flex">
       <div class="browser-img">
-        <img id="userImage" src="images/userpicture.webp" alt="" />
+        <img id="userImage" src="${changeProfile}" alt="" />
       </div>
       <div class="user-details">
         <h2 id="changePostName">${dataBaseUserName.toUpperCase()}</h2>
@@ -55,8 +56,15 @@ userPost.innerHTML = `
 
 function post() {
     localStorage.setItem("display", "showPost");
+    
 
 }
+
+
+changeProfile.onchange = function () {
+    userImage.src = URL.createObjectURL(changeProfile.files[0])
+}
+
 
 // console.log("userName", userPost)
 // console.log("pst", showPost)

@@ -12,6 +12,14 @@ var showPost = document.getElementById("display")
 
 // var postUserName = document.getElementById("changePostName");
 
+// localStorage.setItem('display', 'showPost');
+// var updateUser = localStorage.getItem('display');
+
+
+//Get the signup username and password from the localstorage
+var dataBaseUserName = localStorage.getItem("username");
+
+
 
 
 
@@ -25,8 +33,8 @@ userPost.innerHTML = `
         <img id="userImage" src="images/userpicture.webp" alt="" />
       </div>
       <div class="user-details">
-        <h2 id="changePostName">${userName}</h2>
-        <div id="changePostUsername">@${userName}</div>
+        <h2 id="changePostName">${dataBaseUserName.toUpperCase()}</h2>
+        <div id="changePostUsername">@${dataBaseUserName.toLowerCase()}</div>
       </div>
     </div>
     <div>
@@ -50,5 +58,5 @@ function post() {
 
 }
 
-console.log("userName", userName)
+// console.log("userName", userPost)
 // console.log("pst", showPost)

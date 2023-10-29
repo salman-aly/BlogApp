@@ -48,6 +48,7 @@
 
 .flex {
     display: flex;
+    margin-left: 20px;
 }
 
 .user-details {
@@ -59,7 +60,30 @@
     border: none;
     outline: none;
     font-size: 22px;
-    margin-top: -25px;
+    margin: -20px 10px;
     height: 130px;
     padding: 0 10px 50px 20px;
+}
+
+.icons .bx {
+    font-size: 25px;
+    padding-left: 15px;
+    margin-left: 45px;
+}
+
+.postBtn {
+    width: 450px;
+    background-color: #0078ff;
+    margin: 30px 23px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.postBtn:hover {
+    background-color: #0093FF;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }

@@ -8,6 +8,11 @@ var changeProfile = document.getElementById("userProfile");
 var userName = document.getElementById("username");
 var passWord = document.getElementById("pass");
 
+// var postUserName = document.getElementById("changePostName");
+
+
+
+
 
 userPost.innerHTML = `
   <div class="post">
@@ -15,7 +20,7 @@ userPost.innerHTML = `
     <div class="hr"></div>
     <div class="flex">
       <div class="browser-img">
-        <img id="userImage" src="${changeProfile}" alt="" />
+        <img id="userImage" src="images/userpicture.webp" alt="" />
       </div>
       <div class="user-details">
         <h2 id="changePostName">${userName}</h2>
@@ -36,5 +41,5 @@ userPost.innerHTML = `
   </div>
 `
 
-console.log("userName", signUpUsername)
-console.log("name", userPassword)
+console.log("userName", userName)
+console.log("name", passWord)

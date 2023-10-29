@@ -1,34 +1,65 @@
 /* Post app css*/
 
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.header{
-    background-color: #1A87EC;
-    height: 80px;
-    text-align: center;
+
+.post-main {
+    height: 100vh;
+    background: linear-gradient(#00c6ff, #0078ff);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.header h3{
-    font-size: 24px;
-    color: #fff;
+    flex-direction: column;
 }
 
-.header h3:after {
-    content: '';
-    width: 50px;
-    height: 2px;
-    border-radius: 3px;
-    background: #ffffff;
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+.post {
+    height: 400px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
 }
-.post{
-    background-color: aqua;
+
+.post h3 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.post .hr {
+    width: 90%;
+    height: 1px;
+    background-color: #dddfe2;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.browser-img #Post-dp-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.user-details {
+    margin: 20px 10px;
+}
+
+#display {
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    margin-top: -25px;
+    height: 130px;
+    padding: 0 10px 50px 20px;
 }

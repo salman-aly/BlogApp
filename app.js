@@ -11,8 +11,8 @@ var signUpUsername = document.getElementById("username-signup")
 var userPassword = document.getElementById("pass-signup")
 
 //Store the signup username and password in the localstorage
-localStorage.setItem("username", signUpUsername);
-localStorage.setItem("password", userPassword);
+localStorage.setItem("username", "signUpUsername");
+localStorage.setItem("password", "userPassword");
 
 //Get the signup username and password from the localstorage
 var dataBaseUserName = localStorage.getItem("username");

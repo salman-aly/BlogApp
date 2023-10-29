@@ -8,6 +8,8 @@ var changeProfile = document.getElementById("userProfile");
 var userName = document.getElementById("username");
 var passWord = document.getElementById("pass");
 
+var showPost = document.getElementById("display")
+
 // var postUserName = document.getElementById("changePostName");
 
 
@@ -41,5 +43,12 @@ userPost.innerHTML = `
   </div>
 `
 
+
+
+function post() {
+    localStorage.setItem("display", "showPost");
+
+}
+
 console.log("userName", userName)
-console.log("name", passWord)
+// console.log("pst", showPost)

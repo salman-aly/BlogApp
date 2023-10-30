@@ -18,7 +18,7 @@ var dataBaseUserName = localStorage.getItem("username");
 //new post will display after posting
 var postedPost = document.getElementById("newPost");
 
-//userprfile change 
+//userprofile change 
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
@@ -33,11 +33,11 @@ userPost.innerHTML = `
       </div>
       <div class="user-details">
         <h2 id="changePostName">${dataBaseUserName}</h2>
-        <div id="changePostUsername">@${dataBaseUserName}</div>
+        <div id="changePostUsername">@${dataBaseUserName}22</div>
       </div>
     </div>
     <div>
-      <input type="text" id="display" placeholder="What is happening?" />
+      <input type="text" id="display" placeholder="What is happening ${dataBaseUserName}?" />
     </div>
     <div class="icons">
       <i class="bx bx-image-add" style="color: #007fff" id="bx" onclick="bgColorChange()"></i>

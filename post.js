@@ -15,9 +15,10 @@ var showPost = document.getElementById("display");
 //get username from localstoarage and rename the username here
 var dataBaseUserName = localStorage.getItem("username");
 
+//new post will display after posting
 var postedPost = document.getElementById("newPost");
 
-
+//userprfile change 
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
@@ -39,7 +40,7 @@ userPost.innerHTML = `
       <input type="text" id="display" placeholder="What is happening?" />
     </div>
     <div class="icons">
-      <i class="bx bx-image-add" style="color: #007fff"></i>
+      <i class="bx bx-image-add" style="color: #007fff" id="bx" onclick="bgColorChange()"></i>
       <i class='bx bxs-file-gif' style='color:#007fff' ></i>
       <i class='bx bx-poll' style='color:#007fff' ></i>
       <i class='bx bx-smile' style='color:#007fff' ></i>
@@ -51,13 +52,12 @@ userPost.innerHTML = `
 
 
 function post() {
-  localStorage.setItem('poststore', 'showPost');
   var showPost = document.getElementById("display").value
 
   if (showPost === "") {
     postedPost.style.display = "none";
     Swal.fire({
-      text: `Please write something about this post!`
+      text: `Please say something about this post!`
     });
   } else {
     postedPost.style.display = "block";
@@ -72,13 +72,17 @@ function post() {
         </div>
       </div>
     `
+    localStorage.setItem('poststore', showPost);
     document.getElementById("display").value = ""
   }
-
-
-
 }
 
+
+
+function bgColorChange() {
+  var img = document.getElementById("bx");
+  img.style.display = "background-color='red'"
+}
 
 
 

@@ -92,19 +92,24 @@
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
+#newPost{
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
 
 
 .newPost {
     height: 100vh;
-    margin: 40px auto;
+    margin: 50px auto;
     width: 400px;
     height: 400px;
     text-align: center;
     border-radius: 50px 0px 0px 0px;
     background: linear-gradient(#00c6ff, #0078ff) !important;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    /* display: none; */
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        /* display: none; */
     color: #fff;
+    padding-bottom: 40px;
 }
 
 .newPost h3 {
@@ -122,7 +127,7 @@
     border-radius: 3px;
     background: #ffffff;
     position: absolute;
-    top: 118%;
+    top: 124%;
     left: 50%;
     transform: translateX(-50%);
 }

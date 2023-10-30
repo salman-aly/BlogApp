@@ -8,17 +8,14 @@ var changeProfile = document.getElementById("userProfile");
 var userName = document.getElementById("username");
 var passWord = document.getElementById("pass");
 
-var showPost = document.getElementById("display")
+var showPost = document.getElementById("display");
 
 // var postUserName = document.getElementById("changePostName");
 
-// localStorage.setItem('display', 'showPost');
-// var updateUser = localStorage.getItem('display');
-
-
-//Get the signup username and password from the localstorage
+//get username from localstoarage and rename the username here
 var dataBaseUserName = localStorage.getItem("username");
 
+var postedPost = document.getElementById("newPost");
 
 
 var userImage = document.getElementById("userImage");
@@ -34,8 +31,8 @@ userPost.innerHTML = `
         <img id="userImage" src="${changeProfile}" alt="" />
       </div>
       <div class="user-details">
-        <h2 id="changePostName">${dataBaseUserName.toUpperCase()}</h2>
-        <div id="changePostUsername">@${dataBaseUserName.toLowerCase()}</div>
+        <h2 id="changePostName">${dataBaseUserName}</h2>
+        <div id="changePostUsername">@${dataBaseUserName}</div>
       </div>
     </div>
     <div>
@@ -53,18 +50,39 @@ userPost.innerHTML = `
 `
 
 
-
 function post() {
-    localStorage.setItem("display", "showPost");
-    
+  localStorage.setItem('postlocal', 'showPost');
+
+  if (showPost === "") {
+    postedPost.style.display = "none";
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: `Username can't be empty!`
+    });
+  } else {
+    postedPost.style.display = "block";
+  }
+
+  postedPost.innerHTML = `
+  <div class="createdPost">
+    <h3>Published Blog</h3>
+    <p>${display.value}</p>
+    <div class="social">
+      <i class="bx bx-like" style="color: #ffffff"></i>
+      <i class="bx bxs-chat" style="color: #ffffff"></i>
+      <i class="bx bxs-share-alt" style="color: #ffffff"></i>
+    </div>
+  </div>
+`;
 
 }
 
 
-changeProfile.onchange = function () {
-    userImage.src = URL.createObjectURL(changeProfile.files[0])
-}
 
 
-// console.log("userName", userPost)
-// console.log("pst", showPost)
+// changeProfile.onchange = function () {
+//     userImage.src = URL.createObjectURL(changeProfile.files[0])
+// }
+
+

@@ -32,12 +32,12 @@ userPost.innerHTML = `
         <img id="userImage" src="${changeProfile}" alt="" />
       </div>
       <div class="user-details">
-        <h2 id="changePostName">${dataBaseUserName}</h2>
+        <h2 id="changePostName">${dataBaseUserName.toUpperCase()}<img src="images/Twitter_Verified_Badge.svg.webp" alt="" height="20px"></h2>
         <div id="changePostUsername">@${dataBaseUserName}22</div>
       </div>
     </div>
     <div>
-      <input type="text" id="display" placeholder="What is happening ${dataBaseUserName}?" />
+      <input type="text" id="display" placeholder="Share your thoughts ${dataBaseUserName}?" />
     </div>
     <div class="icons">
       <i class="bx bx-image-add" style="color: #007fff" id="bx" onclick="bgColorChange()"></i>

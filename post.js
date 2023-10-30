@@ -51,21 +51,18 @@ userPost.innerHTML = `
 
 
 function post() {
-  localStorage.setItem('postlocal', 'showPost');
+  localStorage.setItem('poststore', 'showPost');
+  var showPost = document.getElementById("display").value
 
   if (showPost === "") {
     postedPost.style.display = "none";
     Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: `Username can't be empty!`
+      text: `Please write something about this post!`
     });
   } else {
     postedPost.style.display = "block";
-  }
-
-  postedPost.innerHTML += `
-    <div  class="newPost createdPost">
+    postedPost.innerHTML += `
+      <div class="newPost createdPost">
         <h3>Published Blog</h3>
         <p>${display.value}</p>
         <div class="social">
@@ -73,8 +70,12 @@ function post() {
           <i class="bx bxs-chat" style="color: #ffffff"></i>
           <i class="bx bxs-share-alt" style="color: #ffffff"></i>
         </div>
-    </div>
-  `;
+      </div>
+    `
+    document.getElementById("display").value = ""
+  }
+
+
 
 }
 

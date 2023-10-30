@@ -64,17 +64,17 @@ function post() {
     postedPost.style.display = "block";
   }
 
-  postedPost.innerHTML = `
-  <div class="createdPost">
-    <h3>Published Blog</h3>
-    <p>${display.value}</p>
-    <div class="social">
-      <i class="bx bx-like" style="color: #ffffff"></i>
-      <i class="bx bxs-chat" style="color: #ffffff"></i>
-      <i class="bx bxs-share-alt" style="color: #ffffff"></i>
+  postedPost.innerHTML += `
+    <div  class="newPost createdPost">
+        <h3>Published Blog</h3>
+        <p>${display.value}</p>
+        <div class="social">
+          <i class="bx bx-like" style="color: #ffffff"></i>
+          <i class="bx bxs-chat" style="color: #ffffff"></i>
+          <i class="bx bxs-share-alt" style="color: #ffffff"></i>
+        </div>
     </div>
-  </div>
-`;
+  `;
 
 }
 

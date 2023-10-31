@@ -28,7 +28,10 @@ var changeProfile = document.getElementById("userProfile");
 
 userPost.innerHTML = `
   <div class="post">
-    <h3>Create Blog</h3>
+    <div class="h-flex">
+     <img src="images/logo.jpg" height="40px" width="120px" alt="">
+     <button class="logoutBtn" onclick="logOut()">Logout</button>
+    </div>
     <div class="hr"></div>
     <div class="flex">
       <div class="browser-img">
@@ -67,10 +70,14 @@ function post() {
        <h3>Published Blog</h3>
        <p>${showPost}</p>
       </div>
-    `;
+    `
     localStorage.setItem('poststore', showPost);
     quill.setText(""); 
   }
+}
+
+function logOut(){
+  window.location.assign("index.html")
 }
 
 

@@ -144,6 +144,20 @@
     /* display: none; */
 }
 
+.h-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 55px;
+}
+.logoutBtn{
+    width: 100px;
+    background-color: #0078ff;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
 .newPost h3 {
     margin-top: 30px;
     font-size: 26px;

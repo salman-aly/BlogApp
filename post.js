@@ -65,15 +65,7 @@ function post() {
   } else {
     postedPost.style.display = "block";
     postedPost.innerHTML += `
-      <div class="newPost createdPost">
-        <h3>Published Blog</h3>
-        <p>${quill.getText()}</p>
-        <div class="social">
-          <i class="bx bx-like" style="color: #ffffff"></i>
-          <i class="bx bxs-chat" style="color: #ffffff"></i>
-          <i class="bx bxs-share-alt" style="color: #ffffff"></i>
-        </div>
-      </div>
+      
     `
     localStorage.setItem('poststore', quill.getText());
     document.getElementById("editor").value = ""
@@ -92,5 +84,3 @@ function bgColorChange() {
 // changeProfile.onchange = function () {
 //     userImage.src = URL.createObjectURL(changeProfile.files[0])
 // }
-
-

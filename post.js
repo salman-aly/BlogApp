@@ -39,9 +39,7 @@ userPost.innerHTML = `
         <div id="changePostUsername">@${dataBaseUserName}22</div>
       </div>
     </div>
-    <div id="editor">
-      
-    </div>
+    <button class="postBtn" onclick="post()">Post</button>
     <div class="icons">
       <i class="bx bx-image-add" style="color: #007fff" id="bx" onclick="bgColorChange()"></i>
       <i class='bx bxs-file-gif' style='color:#007fff' ></i>
@@ -53,9 +51,8 @@ userPost.innerHTML = `
   </div>
 `
 
-
 function post() {
-  var showPost = document.getElementById("editor").value
+  var showPost = quill.root.innerHTML.trim();
 
   if (showPost === "") {
     postedPost.style.display = "none";
@@ -64,13 +61,18 @@ function post() {
     });
   } else {
     postedPost.style.display = "block";
+
     postedPost.innerHTML += `
-      
-    `
-    localStorage.setItem('poststore', quill.getText());
-    document.getElementById("editor").value = ""
+      <div class="newPost createdPost">
+       <h3>Published Blog</h3>
+       <p>${showPost}</p>
+      </div>
+    `;
+    localStorage.setItem('poststore', showPost);
+    quill.setText(""); 
   }
 }
+
 
 
 

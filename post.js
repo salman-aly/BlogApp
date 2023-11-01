@@ -25,7 +25,7 @@ var postedPost = document.getElementById("newPost");
 var userImage = document.getElementById("userImage");
 var changeProfile = document.getElementById("userProfile");
 
-
+// for posting blog
 userPost.innerHTML = `
   <div class="post">
     <div class="h-flex">
@@ -53,7 +53,7 @@ userPost.innerHTML = `
     
   </div>
 `
-
+// for posted blog
 function post() {
   var showPost = quill.root.innerHTML.trim();
 
@@ -72,21 +72,22 @@ function post() {
       </div>
     `
     localStorage.setItem('poststore', showPost);
-    quill.setText(""); 
+    quill.setText("");
   }
 }
 
-function logOut(){
+// for logout button
+function logOut() {
   localStorage.clear()
-  window.location.assign("index.html")
-}
-
-
-
-
-function bgColorChange() {
-  var img = document.getElementById("bx");
-  img.style.display = "background-color='red'"
+  Swal.fire({
+    icon: 'success',
+    title: `${dataBaseUserName} logout successfully!`,
+    showConfirmButton: false,
+    timer: 1500
+  });
+  setTimeout(() => {
+    window.location.assign("index.html")
+  }, 2000)
 }
 
 

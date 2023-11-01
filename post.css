@@ -151,6 +151,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 55px;
+    align-items: center;
 }
 .logoutBtn{
     width: 100px;
@@ -160,6 +161,7 @@
     border-radius: 2px;
     cursor: pointer;
     height: 30px;
+    font-size: 16px;
 }
 
 .newPost h3 {

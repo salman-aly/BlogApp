@@ -29,13 +29,13 @@ var changeProfile = document.getElementById("userProfile");
 userPost.innerHTML = `
   <div class="post">
     <div class="h-flex">
-     <img src="images/logo.jpg" height="40px" width="120px" alt="">
+     <img src="images/572.png" height="45px" alt="">
      <button class="logoutBtn" onclick="logOut()">Logout</button>
     </div>
     <div class="hr"></div>
     <div class="flex">
       <div class="browser-img">
-        <img id="userImage" src="${changeProfile}" alt="" />
+        <img id="userImage" src="images/userpicture.webp" alt="" />
       </div>
       <div class="user-details">
         <h2 id="changePostName">${dataBaseUserName.toUpperCase()}<img src="images/Twitter_Verified_Badge.svg.webp" alt="" height="20px"></h2>
@@ -77,6 +77,7 @@ function post() {
 }
 
 function logOut(){
+  localStorage.clear()
   window.location.assign("index.html")
 }
 

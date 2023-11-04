@@ -58,10 +58,10 @@ function login() {
     var passWord = document.getElementById("pass").value = "";
 }
 
-// for change profile image
-changeProfile.onchange = function () {
-    userImage.src = URL.createObjectURL(changeProfile.files[0])
-}
+// // for change profile image
+// changeProfile.onchange = function () {
+//     userImage.src = URL.createObjectURL(changeProfile.files[0])
+// }
 
 
 // function for sign up form

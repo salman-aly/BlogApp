@@ -36,7 +36,7 @@
     color: black;
 }
 
-.header-Btn .signIn {
+.header-Btn .signout {
     width: 180px;
     border-radius: 20px;
     padding: 8px;
@@ -46,16 +46,9 @@
     font-weight: 700;
 }
 
-/* .header-Btn .signUp {
-    width: 110px;
-    border-radius: 20px;
-    padding: 8px;
-    border: 1px solid black;
-    background-color: black;
-    cursor: pointer;
-    color: #fff;
-    border-radius: none;
-} */
+.header-Btn .signout:hover {
+    border: none;
+}
 
 .slider {
     height: 600px;
@@ -169,22 +162,23 @@
 .container-blogs {
     text-align: justify;
 }
+
 .blog-inner img {
     width: 100%;
 }
 
-.blog-inner h4{
+.blog-inner h4 {
     font-size: 24px;
     padding: 20px;
     margin-left: 20px;
 }
 
-.blog-inner p{
+.blog-inner p {
     font-size: 18px;
     margin-top: -40px;
 }
 
-.footer{
+.footer {
     color: #000000;
     height: 300px;
     background-image: url(images/line-shape.webp);
@@ -194,31 +188,31 @@
     justify-content: space-around;
 }
 
-.footer h3{
+.footer h3 {
     font-size: 28px;
     padding-bottom: 15px;
 }
 
-.footer .bx{
+.footer .bx {
     font-size: 22px;
     padding-bottom: 10px;
 }
 
-.footer ul{
+.footer ul {
     list-style: none;
 }
 
-.footer-logo img{
+.footer-logo img {
     height: 150px;
 }
 
-.about-us p{
+.about-us p {
     font-size: 18px;
 }
 
-.privacy{
+.privacy {
     height: 50px;
-    background:#000000;
+    background: #000000;
     text-align: center;
     font-size: 22px;
     color: #fff;
@@ -341,7 +335,7 @@
 
 .postBtn {
     width: 450px;
-    background-color: rgb(255, 0, 0);
+    background-color: #0078ff;
     margin: 30px 23px;
     height: 40px;
     border: none;
@@ -351,7 +345,6 @@
     position: absolute;
     top: 275%;
     left: 31%;
-    z-index: 9999999999999 !important;
 }
 
 .postBtn:hover {
@@ -387,16 +380,7 @@
     align-items: center;
 }
 
-.logoutBtn {
-    width: 100px;
-    background-color: #0078ff;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    height: 30px;
-    font-size: 16px;
-}
+
 
 .newPost h3 {
     margin-top: 30px;

@@ -45,7 +45,7 @@ function post() {
     postedPost.innerHTML += `
       <div class="newPost createdPost">
        <h3>Published Blog</h3>
-       <p>${showPost}</p>
+       <div>${showPost}</div>
       </div>
     `
     localStorage.setItem('poststore', showPost);
